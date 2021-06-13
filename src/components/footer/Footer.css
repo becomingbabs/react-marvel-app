@@ -2,12 +2,22 @@
     display: flex; 
     justify-content: center; 
     height: 150px; 
-    border-bottom: 1px solid #3B3B3B; 
-    background: #1A1A1A; 
+    border-top: 1px solid #4f4f4f; 
+    background: #2d2d2d; 
     color: #ffffff; 
     flex-shrink: 0; 
 }
 
 .footer-content {
     text-align: center; 
+}
+
+.app-footer a {
+    text-decoration: none;
+    color: #850707; 
+}
+
+.app-footer a:hover {
+    text-decoration: underline;
+    color: #B6AF06;
 }

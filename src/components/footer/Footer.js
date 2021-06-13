@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="app-footer">
             <div className="footer-content">
                 <a
-                href="https://github.com/becomingbabs/react-dictionary-app"
+                href="https://github.com/becomingbabs/react-marvel-app"
                 id="open-source-link"
                 target="_blank"
                 rel="noreferrer"
@@ -16,15 +16,15 @@ export default function Footer() {
                 <br/>
                 by Barbara. 
                 <br/> 👩🏻‍💻 <br/>  
-                This app was inspired by {" "}
+                Data provided by {" "}
                 <a href="https://www.marvel.com/"
                 id="Marvel-link"
                 target="_blank"
                 rel="noreferrer">
-                    Marvel
+                    <strong>Marvel</strong>
                 </a>
                 <br/>
-                using their free API.  
+                © 2014 Marvel  
             </div>
           </footer>
     )

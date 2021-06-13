@@ -1,11 +1,33 @@
 nav {
   display: flex; 
-  justify-content: center; 
+  justify-content: space-evenly; 
   align-items: center; 
   height: 150px; 
-  border-bottom: 1px solid #3B3B3B; 
-  background: #1A1A1A; 
+  border-bottom: 1px solid #4f4f4f; 
+  background: #2d2d2d; 
   color: #ffffff; 
+}
+
+.home-button {
+  background: #004D7C; 
+  border-radius: 5px; 
+  border: 1px solid #004D7C; 
+  padding: 5px 15px; 
+}
+
+.home-button a {
+  color: #B6AF06;
+  text-decoration: none; 
+  font-size: 20px; 
+}
+
+.home-button:hover {
+  background: #0C725A; 
+  border: 1px solid #B6AF06;
+}
+
+.home-button a:hover {
+  color: #ffffff;
 }
 
 .container {
@@ -13,5 +35,8 @@ nav {
   display: flex; 
   flex: 1; 
   flex-direction: column; 
+  justify-content: center;
   align-items: center; 
+  width: 100%;
+  height: 100%; 
 }
