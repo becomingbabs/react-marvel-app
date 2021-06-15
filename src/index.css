@@ -1,6 +1,11 @@
+@font-face {
+  font-family: myMainFont;
+  src: url(./fonts/Stanberry.ttf);
+}
+
 body {
   height: 100%; 
-  font-family: 'Righteous', cursive;
+  font-family: myMainFont;
   background: #000000;
   margin: 0; 
 }

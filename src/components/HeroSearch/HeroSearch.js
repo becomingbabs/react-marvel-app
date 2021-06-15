@@ -3,8 +3,9 @@ import "./HeroSearch.css";
 import md5 from "js-md5";
 import Characters from "../Characters/Characters.js";
 import Comics from "../Comics/Comics.js";
+import FavoritesList from "../FavoritesList/FavoritesList";
 
-export default function HeroSearch() {
+export default function HeroSearch(props) {
   let [characters, setCharacters] = useState([]);
   let [comics, setComics] = useState([]);
   let [inputSearch, setInputSearch] = useState("");
@@ -77,12 +78,19 @@ export default function HeroSearch() {
     }
   };
 
+  const onClickFavorite = (input) => {
+    setInputSearch(input)
+  }
+
+  const { setShowFavoriteList, showFavoriteList } = props
+
   return (
     <div className="heroes">
+      {showFavoriteList && <FavoritesList setShowFavoriteList={setShowFavoriteList} onClickFavorite={onClickFavorite} />}
       <section>
         <h2>
-          <label id="search-text" htmlFor="photo-search">
-            Which hero do you need?
+          <label className="search-header" htmlFor="photo-search">
+            Find a Hero! 
           </label>
         </h2>
         <form className="search-form" onSubmit={handleSubmit}>

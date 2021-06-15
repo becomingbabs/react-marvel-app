@@ -3,7 +3,6 @@ import './App.css';
 import Footer from "./components/Footer/Footer.js";
 import MarvelIcon from "./imgs/marvel-icon.png";
 import HeroSearch from "./components/HeroSearch/HeroSearch.js";
-import FavoritesList from './components/FavoritesList/FavoritesList';
 
 function App() {
   const [showFavoriteList, setShowFavoriteList] = useState(false)
@@ -24,10 +23,9 @@ function App() {
                     Favorites
               </button>
             </div>
-            {showFavoriteList && <FavoritesList setShowFavoriteList={setShowFavoriteList}/>}
         </header>
         <main>
-          <HeroSearch /> 
+          <HeroSearch showFavoriteList={showFavoriteList} setShowFavoriteList={setShowFavoriteList} /> 
         </main>
           <Footer /> 
       </div>

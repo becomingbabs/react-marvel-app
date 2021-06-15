@@ -23,5 +23,13 @@
 
 .favorites-titles {
     text-align: left; 
-
 }
+
+.favorites-titles:hover {
+    cursor: pointer;
+}
+
+.favorites-titles:active {
+    color: #B6AF06;
+}
+

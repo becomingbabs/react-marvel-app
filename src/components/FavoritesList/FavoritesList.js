@@ -3,7 +3,7 @@ import "./FavoritesList.css";
 
 export default function FavoritesList(props) {
   const [ favoriteList, setFavoriteList ] = useState([])
-  const { setShowFavoriteList } = props 
+  const { setShowFavoriteList, onClickFavorite } = props 
 
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites"));
@@ -20,7 +20,7 @@ export default function FavoritesList(props) {
       </div>
         <ul className="favorites-list">
           {favoriteList.map((favorite, i) => (
-            <li className="favorites-titles" key={`f-${i}`}>{favorite}</li>
+            <li onClick={() => onClickFavorite(favorite)} className="favorites-titles" key={`f-${i}`}>{favorite}</li>
           ))}
         </ul>
     </div>
