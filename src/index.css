@@ -1,4 +1,6 @@
-html, body {
-  height: 100vh; 
+body {
+  height: 100%; 
   font-family: 'Righteous', cursive;
+  background: #000000;
+  margin: 0; 
 }

@@ -1,0 +1,30 @@
+.heroes section {
+    margin: 10px 0;
+    padding: 5px; 
+    border: 1px solid #4f4f4f; 
+    border-radius: 8px;
+    background: #2d2d2d; 
+    text-align: center;
+    color: #ffffff; 
+}
+
+.search-form {
+    margin: 10px; 
+    line-height: 2;
+}
+
+.search-button {
+    background: #004D7C; 
+    border-radius: 5px; 
+    border: 1px solid #004D7C; 
+    margin: 15px 0 0 0; 
+    padding: 3px 7px;
+    color: #ffffff; 
+    font-size: 15px; 
+  }
+
+  .search-button:hover {
+    background: #0C725A; 
+    border: 1px solid #B6AF06;
+    cursor: pointer; 
+  }

@@ -1,19 +1,17 @@
 import React, { useEffect, useState} from "react";
-import "./Home.css"; 
+import "./HeroSearch.css"; 
 import md5 from 'js-md5';
+import Characters from "../Characters/Characters.js";
 
-export default function Home() {
+export default function HeroSearch() {
     let [characters, setCharacters] = useState([]);
     let [inputSearch, setInputSearch] = useState("");
-    let [heroDetail, setHeroDetail] = useState(false);
-    let [error, setError] = useState(null); 
-    let [thumbnail, setThumbnail] = useState(null); 
-    const [fetchedData, setFetchedData] = useState('');
+    
 
     let marvelApiKey = "f185f4a73012178c4360033e956d3835"; 
     let marvelPrivateKey = "4ef9a1650c885ad0d051cdb44d307eaaa4e8e9f1";
     let marvelApiUrl = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${inputSearch}&apikey=${marvelApiKey}`;
-    let marvelRandom = `https://gateway.marvel.com:443/v1/public/characters?name=&apikey=${marvelApiKey}`;
+   
     
     useEffect (() => {
         async function getRandomCharacter() {
@@ -26,12 +24,14 @@ export default function Home() {
                 )).json()
                 
                 const heroes = response.data.results
-    
-                const randomCharacter = heroes[Math.floor(Math.random() * heroes.length)];
-    
-                setCharacters([randomCharacter])
-
-                console.log(randomCharacter)
+                
+                let randomHero = [];
+                for (let i = 0; i < 8; i++) {
+                    const randomCharacter = heroes[Math.floor(Math.random() * heroes.length)];
+                   randomHero.push(randomCharacter); 
+                }
+                setCharacters(randomHero)
+               
             } catch (error) {
                 console.log(error);
             }
@@ -54,15 +54,16 @@ export default function Home() {
       }
 
         return (
-            <div className="character-grid">
-                <form className="search-form"
+            <div className="heroes">
+                <section>
+                    <h2>
+                        <label id="search-text"
+                        htmlFor="photo-search">
+                        Which hero do you need?
+                        </label>
+                    </h2>
+                    <form className="search-form"
                     onSubmit={handleSubmit}>
-                        <h2>
-                            <label id="search-text"
-                            for="photo-search">
-                            Which hero do you need?
-                            </label>
-                        </h2>
                         <div>
                             <input id="photo-search" 
                             type="search" 
@@ -78,28 +79,9 @@ export default function Home() {
                                 Search 
                             </button>
                         </div>
-                </form>
-
-                <div className="character-cards">
-                    {characters.map(hero => (
-                        <div onClick={() => setHeroDetail(hero)}>
-                           {hero.name}
-                          <img src={`${hero.thumbnail.path}/portrait_medium.${hero.thumbnail.extension}`} alt="" />
-                        </div>
-                    ))}
-                </div>
-
-                {heroDetail && (
-                   <div className="modal">
-                       SOY EL MODAL
-                       {heroDetail.name}
-                       {heroDetail.comics.items.map(comic => (
-                           <div className="">
-                               {comic.name}
-                           </div>
-                       ))}
-                    </div>
-                )}
+                    </form>
+                </section>
+                <Characters characters={characters} />
             </div>
         );
     }

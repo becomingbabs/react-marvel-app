@@ -1,0 +1,29 @@
+.modal {
+    position: fixed;
+    left: 25%;
+    top: 15%;
+    width: 50%;
+    border: 10px solid #850707; 
+    border-radius: 8px;
+    padding: 10px; 
+    background: #2d2d2d; 
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.button-block {
+    text-align: right; 
+}
+
+.comic-list {
+    text-align: center; 
+    width: 75%; 
+    margin: 0 auto; 
+}
+
+.comic-titles {
+    text-align: left; 
+
+}
