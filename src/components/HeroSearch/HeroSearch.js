@@ -24,7 +24,7 @@ export default function HeroSearch() {
                 )).json()
                 
                 const heroes = response.data.results
-                
+
                 let randomHero = [];
                 for (let i = 0; i < 8; i++) {
                     const randomCharacter = heroes[Math.floor(Math.random() * heroes.length)];
@@ -46,6 +46,7 @@ export default function HeroSearch() {
         setInputSearch('')
       
         setCharacters(response.data.results)
+        console.log(response.data.results)
       }
     
       const handleSubmit = e => {

@@ -15,11 +15,9 @@ export default function ComicDetails(props) {
             </h2>
             <div className="comic-list">
                 {props.heroDetail.comics.items.map(comic => (
-                    
                         <li className="comic-titles" key={props.heroDetail.comics.items.index}>
                             {comic.name}
                         </li>
-                
                 ))}
              </div>
         </div>

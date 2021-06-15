@@ -9,11 +9,11 @@ export default function Characters(props) {
         <section>
             <div className="character-cards">
                     {props.characters.map(hero => (
-                        <div onClick={() => setHeroDetail(hero)}>
+                        <div onClick={() => setHeroDetail(hero)} key={hero.id}>
                            <p className="hero-name">
                                {hero.name}
                             </p>
-                          <img src={`${hero.thumbnail.path}/standard_medium.${hero.thumbnail.extension}`} alt="" key={hero.id} />
+                          <img src={`${hero.thumbnail.path}/standard_medium.${hero.thumbnail.extension}`} alt="" />
                         </div>
                     ))}
             </div>
