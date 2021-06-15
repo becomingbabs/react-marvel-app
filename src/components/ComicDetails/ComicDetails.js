@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ComicDetails.css";
 
 export default function ComicDetails(props) {
@@ -10,12 +10,12 @@ export default function ComicDetails(props) {
                     X 
                 </button>
             </div>
-            <h2>
+            <p className="comics-hero-name">
                 {props.heroDetail.name}
-            </h2>
+            </p>
             <div className="comic-list">
-                {props.heroDetail.comics.items.map(comic => (
-                        <li className="comic-titles" key={props.heroDetail.comics.items.index}>
+                {props.heroDetail.comics.items.map((comic, i) => (
+                        <li className="comic-titles" key={`comic-${i}`}>
                             {comic.name}
                         </li>
                 ))}

@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import './App.css';
-import Footer from "./components/footer/Footer";
+import Footer from "./components/Footer/Footer.js";
 import MarvelIcon from "./imgs/marvel-icon.png";
 import HeroSearch from "./components/HeroSearch/HeroSearch.js";
+import FavoritesList from './components/FavoritesList/FavoritesList';
 
 function App() {
+  const [showFavoriteList, setShowFavoriteList] = useState(false)
   return (
     <div className="App">
       <div className="container">
@@ -11,13 +14,17 @@ function App() {
             <img src={MarvelIcon} 
             alt="Marvel Book Icon"
             className="marvel-book-icon"
-            /> 
-            <br/>
-            <a>
-              <button className="favorites-button">
-                Favorites 
+            />
+            <div>
+              <button className="favorites-button" 
+                type="submit" 
+                value="Search"
+                onClick={() => setShowFavoriteList(true)}
+                >
+                    Favorites
               </button>
-            </a>
+            </div>
+            {showFavoriteList && <FavoritesList setShowFavoriteList={setShowFavoriteList}/>}
         </header>
         <main>
           <HeroSearch /> 

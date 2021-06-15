@@ -1,8 +1,8 @@
-.modal {
+.favorites-modal {
     position: fixed;
-    left: 25%;
-    top: 15%;
-    width: 50%;
+    left: 61%;
+    top: 22%;
+    width: 20%;
     border: 10px solid #850707; 
     border-radius: 8px;
     padding: 10px; 
@@ -13,23 +13,15 @@
     justify-content: space-between;
 }
 
-.button-block {
-    text-align: right; 
-}
-
-.comics-hero-name {
-    font-size: 16px; 
-}
-
-.comic-list {
+.favorites-list {
     text-align: center; 
-    width: 75%; 
+    width: 30%; 
     margin: 0 auto; 
     font-size: 13px; 
     line-height: 1.6;
 }
 
-.comic-titles {
+.favorites-titles {
     text-align: left; 
 
 }

@@ -13,18 +13,31 @@
     line-height: 2;
 }
 
-.search-button {
+.form-button {
     background: #004D7C; 
     border-radius: 5px; 
     border: 1px solid #004D7C; 
-    margin: 15px 0 0 0; 
+    margin: 15px 5px 0 5px; 
     padding: 3px 7px;
     color: #ffffff; 
     font-size: 15px; 
   }
 
-  .search-button:hover {
+  .form-button:hover {
     background: #0C725A; 
     border: 1px solid #B6AF06;
     cursor: pointer; 
+  }
+
+  .search-button:active {
+    background: #850707; 
+  }
+
+  .save-search-button {
+    font-size: 12px;
+    padding: 1px 5px;
+  }
+
+  .save-search-button:active {
+    color: #850707; 
   }

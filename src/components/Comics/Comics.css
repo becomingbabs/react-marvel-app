@@ -1,0 +1,11 @@
+.comic-cards {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 185px; 
+}
+
+.comic-title {
+    font-size: 13px; 
+    margin: 10px 0; 
+}

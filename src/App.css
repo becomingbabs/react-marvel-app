@@ -9,25 +9,36 @@
 }
 
 .marvel-book-icon {
-  margin: 15px 0; 
+  margin: 15px 0 0 0; 
+}
+
+header div {
+  text-align: right; 
+  padding: 0 10px; 
+  margin: 0; 
 }
 
 .favorites-button {
   background: #004D7C; 
   border-radius: 5px; 
   border: 1px solid #004D7C; 
-  padding: 4px 10px; 
+  padding: 3px 5px; 
   color: #ffffff; 
   font-size: 15px; 
+  margin: 0; 
 }
 
-a .favorites-button {
+.favorites-button {
   text-decoration: none; 
 }
 
-a .favorites-button:hover {
+.favorites-button:hover {
   background: #0C725A; 
   border: 1px solid #B6AF06;
   cursor: pointer; 
+}
+
+.favorites-button:active {
+  background: #850707; 
 }
 
