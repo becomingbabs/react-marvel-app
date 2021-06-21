@@ -9,3 +9,20 @@
     font-size: 13px; 
     margin: 10px 0; 
 }
+
+
+.fav-star {
+    color: #B6AF06; 
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .non-fav-star {
+    color: #B6AF06; 
+    font-size: 20px;
+    margin: 0 auto;  
+  }
+
+  .fav-star:hover, .non-fav-star:hover {
+    cursor: pointer; 
+}

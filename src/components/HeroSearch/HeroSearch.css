@@ -1,54 +1,156 @@
-@font-face {
-  font-family: myHeaderFont;
-  src: url(../../fonts/Adventure.otf);
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  margin: 0;
+  height: 80px;
+  max-width: 100%;
+  background: #2d2d2d;
+  border-bottom: 1px solid #4f4f4f;
 }
 
-.heroes section {
-    margin: 10px 0;
-    padding: 5px; 
-    border: 1px solid #4f4f4f; 
-    border-radius: 8px;
-    background: #2d2d2d; 
-    text-align: center;
-    color: #ffffff; 
-}
-
-.search-header {
-  font-family: myHeaderFont; 
-  font-size: 30px; 
-  letter-spacing: 2px;
+.nav-left {
+  display: flex;
 }
 
 .search-form {
-    margin: 10px; 
-    line-height: 2;
+  margin-left: 40px;
+}
+
+.heroes-section {
+  margin: 75px auto 30px auto;
+  padding: 5px;
+  border: 1px solid #4f4f4f;
+  border-radius: 8px;
+  background: #2d2d2d;
+  text-align: center;
+  color: #ffffff;
+  max-width: 960px;
+  min-height: 425px;
+}
+
+input {
+  font-size: 17px;
 }
 
 .form-button {
-    background: #004D7C; 
-    border-radius: 5px; 
-    border: 1px solid #004D7C; 
-    margin: 15px 5px 0 5px; 
-    padding: 3px 7px;
-    color: #ffffff; 
-    font-size: 15px; 
-  }
+  background: #004d7c;
+  border-radius: 5px;
+  border: 1px solid #004d7c;
+  margin: 15px 5px 0 5px;
+  padding: 3px 7px;
+  color: #ffffff;
+  font-size: 15px;
+}
 
-  .form-button:hover {
-    background: #0C725A; 
-    border: 1px solid #B6AF06;
-    cursor: pointer; 
-  }
+.form-button:hover {
+  background: #0c725a;
+  border: 1px solid #b6af06;
+  cursor: pointer;
+}
 
-  .search-button:active {
-    background: #850707; 
-  }
+.search-button:active {
+  background: #850707;
+}
 
-  .save-search-button {
-    font-size: 12px;
-    padding: 1px 5px;
-  }
+.save-search-button {
+  font-size: 12px;
+  padding: 1px 5px;
+}
 
-  .save-search-button:active {
-    color: #850707; 
+.save-search-button:active {
+  color: #850707;
+}
+
+.favorites-container {
+  height: 35px;
+  width: 35px;
+  text-align: center;
+}
+
+.favorites-button {
+  background: #2d2d2d;
+  border: none;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorites-list-star {
+  color: #b6af06;
+  font-size: 28px;
+  margin: 0 auto;
+}
+
+.favorites-list-star:hover {
+  cursor: pointer;
+  color: #999109;
+}
+
+.favorites-list-star:active {
+  color: #850707;
+}
+
+.loading-text {
+  font-size: 30px;
+  margin: 75px auto;
+}
+
+.deadpool-loading {
+  margin: 20px;
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 8px;
+  height: 8px;
+  margin: 2px;
+  background-color: #850707;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
   }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

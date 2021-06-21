@@ -1,44 +1,6 @@
-.container { 
-  max-width: 960px;
-  margin: 0 auto; 
-}
-
-.app-header {
-  margin: 0;
-  text-align: center; 
-}
-
-.marvel-book-icon {
-  margin: 15px 0 0 0; 
-}
-
-header div {
-  text-align: right; 
-  padding: 0 10px; 
+.App {
+  height: 100%; 
+  width: 100%; 
   margin: 0; 
-}
-
-.favorites-button {
-  background: #004D7C; 
-  border-radius: 5px; 
-  border: 1px solid #004D7C; 
-  padding: 3px 5px; 
-  color: #ffffff; 
-  font-size: 15px; 
-  margin: 0; 
-}
-
-.favorites-button {
-  text-decoration: none; 
-}
-
-.favorites-button:hover {
-  background: #0C725A; 
-  border: 1px solid #B6AF06;
-  cursor: pointer; 
-}
-
-.favorites-button:active {
-  background: #850707; 
 }
 

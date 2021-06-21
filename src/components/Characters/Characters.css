@@ -2,6 +2,7 @@
     display: grid;
     grid-gap: 15px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center; 
     grid-auto-rows: 175px; 
 }
 
@@ -9,3 +10,25 @@
     font-size: 15px; 
     margin: 10px 0; 
 }
+
+
+.fav-star {
+    color: #B6AF06; 
+    font-size: 20px;
+    margin: 0 auto;
+  }
+
+  .non-fav-star {
+    color: #B6AF06; 
+    font-size: 20px;
+    margin: 0 auto;  
+  }
+
+  .fav-star:hover, .non-fav-star:hover {
+      cursor: pointer; 
+  }
+
+  .character-image:hover {
+    cursor: pointer; 
+  }
+

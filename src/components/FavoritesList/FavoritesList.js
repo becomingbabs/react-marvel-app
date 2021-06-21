@@ -1,15 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./FavoritesList.css";
 
 export default function FavoritesList(props) {
-  const [ favoriteList, setFavoriteList ] = useState([])
-  const { setShowFavoriteList, onClickFavorite } = props 
+  const { setShowFavoriteList, favoriteList } = props
 
-  useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem("favorites"));
-
-    setFavoriteList(favorites)
-  }, []);
+  console.log(favoriteList)
 
   return (
     <div className="favorites-modal">
@@ -20,7 +15,7 @@ export default function FavoritesList(props) {
       </div>
         <ul className="favorites-list">
           {favoriteList.map((favorite, i) => (
-            <li onClick={() => onClickFavorite(favorite)} className="favorites-titles" key={`f-${i}`}>{favorite}</li>
+            <li className="favorites-titles" key={`f-${i}`}>{favorite.name || favorite.title}</li>
           ))}
         </ul>
     </div>
